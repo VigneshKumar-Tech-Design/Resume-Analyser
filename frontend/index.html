@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Radar</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/logo-lightmode.png" alt="Resume Radar Light Logo" class="logo-img light-logo" />
+        <img src="assets/logo-nightmode.png" alt="Resume Radar Dark Logo" class="logo-img dark-logo" />
+        <h3>Resume Radar</h3>
+      </div>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Upload Section -->
+    <section id="review-section" class="review-section">
+      <div class="container">
+        <h2>Upload Your Resume</h2>
+        <div class="upload-area" id="upload-area">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <p>Drag & drop your resume here or click to browse</p>
+          <input type="file" id="resume-upload" accept=".pdf,.doc,.docx,.txt">
+        </div>
+        <div class="options">
+          <div class="option">
+            <label for="job-title">Target Job Title:</label>
+            <input type="text" id="job-title" placeholder="e.g. Software Engineer">
+          </div>
+          <div class="option">
+            <label for="experience-level">Experience Level:</label>
+            <select id="experience-level">
+              <option value="entry">Entry Level</option>
+              <option value="mid" selected>Mid Career</option>
+              <option value="senior">Senior Level</option>
+              <option value="executive">Executive</option>
+            </select>
+          </div>
+        </div>
+        <button id="analyze-btn" class="btn btn-primary">Analyze Resume</button>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results-section" class="results-section hidden">
+      <div class="container">
+        <h2>Analysis Results</h2>
+        <div class="results-grid">
+          <!-- Score Card -->
+          <div class="score-card">
+            <div class="score-header">
+              <h3>Overall Score</h3>
+              <div class="score-circle">
+                <span id="overall-score">0</span>
+              </div>
+            </div>
+            <p class="score-feedback" id="overall-feedback"></p>
+          </div>
+
+          <!-- Metrics -->
+          <div class="metric" id="ats-score">
+            <h4>ATS Compatibility</h4>
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <p class="metric-feedback"></p>
+          </div>
+          <div class="metric" id="content-score">
+            <h4>Content Quality</h4>
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <p class="metric-feedback"></p>
+          </div>
+          <div class="metric" id="keyword-score">
+            <h4>Keyword Optimization</h4>
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <p class="metric-feedback"></p>
+          </div>
+          <div class="metric" id="format-score">
+            <h4>Formatting</h4>
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <p class="metric-feedback"></p>
+          </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="detailed-feedback">
+          <h3>Detailed Feedback</h3>
+          <div class="feedback-list" id="feedback-list">
+            <!-- Dynamic Feedback Here -->
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button id="try-another" class="btn btn-primary">Try Another Resume</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Info -->
+        <div class="footer-info">
+          <h3>Resume Radar</h3>
+          <p>AI-powered resume analysis tool</p>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="footer-contact">
+          <h4>Tech Stack</h4>
+          <ul>
+            <li>Frontend: HTML, CSS, JavaScript</li>
+            <li>Backend: Python, Flask, LLama 3</li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="footer-contact-details">
+          <h4>Contact Me</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:vigneshkumarofficial81@gmail.com">vigneshkumarofficial81@gmail.com</a></li>
+            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vignesh-kumar-r1/" target="_blank">LinkedIn</a></li>
+            <li><i class="fab fa-github"></i> <a href="https://github.com/VigneshKumar-Tech-Design" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Resume Radar. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
