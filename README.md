@@ -1,6 +1,6 @@
 # Resume Radar - AI-Powered Resume Evaluation System
 
-![frontend/assets/logo-lightmode.png]![frontend/assets/logo-nightmode.png](frontend/assets/logo-lightmode.png)
+![frontend/assets/logo-lightmode.png](frontend/assets/logo-lightmode.png) ![frontend/assets/logo-nightmode.png](frontend/assets/logo-nightmode.png)
 
 **Resume Radar** is an advanced AI-based resume evaluation tool that leverages the locally-installed **Ollama3** LLM to provide comprehensive resume analysis and feedback. This system offers both administrator and standard user interfaces for seamless resume evaluation.
 
