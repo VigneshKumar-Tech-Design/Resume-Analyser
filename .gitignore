@@ -1,81 +1,14 @@
-
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environment
+*.pyc
+*.pyo
+*.pyd
 venv/
-.env/
-.venv/
+
+# Environment
+.env
+.venv
 env/
 
-# Environment variables
-.env
-.env.local
-.env.development
-.env.test
-.env.production
-
-# Uploads folder (contains user-uploaded files)
-!uploads/.gitkeep  
-
-# IDE specific files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Log files
-*.log
-logs/
-
-# Ollama cache
-.ollama/
-
-# Testing
-.coverage
-htmlcov/
-.pytest_cache/
-
-# Build/compilation artifacts
-build/
-dist/
-*.egg-info/
-*.egg
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Database files
-*.db
-*.sqlite
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# VS Code
-*.code-workspace
-
-# PyCharm
-.idea/
-*.iml
-
-# Sublime Text
-*.sublime-workspace
-*.sublime-project
-
-# Development config overrides
-config.py
-settings.py
-
-# Large files
-*.pdf
-*.doc
-*.docx
-*.txt
+# Other
+get-pip.py
